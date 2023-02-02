@@ -34,3 +34,6 @@ jobs:
           echo -e "\nCompiling sbp.sp..."
           spcomp -E -w234 -O2 -v2 -i $includePath -i include sbp.sp
         working-directory: ${{ env.PTAH_SCRIPTING_PATH }}
+        
+      - name: Set output
+        run: echo "{name}={value}" >> $GITHUB_OUTPUT
